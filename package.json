@@ -11,10 +11,14 @@
     "format:check": "oxfmt --check",
     "test": "vitest run",
     "test:watch": "vitest",
-    "check": "pnpm typecheck && pnpm lint && pnpm format:check && pnpm test"
+    "check": "pnpm typecheck && pnpm lint && pnpm format:check && pnpm test",
+    "setup:browser": "playwright-core install chromium"
   },
   "dependencies": {
+    "cheerio": "^1.2.0",
     "pino": "^10.3.1",
+    "rebrowser-playwright": "^1.52.0",
+    "rebrowser-playwright-core": "^1.52.0",
     "zod": "^4.3.6"
   },
   "devDependencies": {

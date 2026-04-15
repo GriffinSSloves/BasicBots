@@ -18,6 +18,11 @@ sustainability, not for speed of writing.
   env vars) and only paired with a runtime validator (Zod or equivalent).
 - **Prefer `type` aliases for data shapes**, `interface` for extensible
   contracts that consumers might implement or augment.
+- **No `I` prefix on interface/type names.** The abstract name takes the
+  clean form (`Scraper`); implementations get descriptive names
+  (`HttpScraper`, `PlaywrightScraper`, `FakeScraper`). This follows the
+  TypeScript ecosystem convention and lets interfaces and type aliases
+  swap back and forth without a rename.
 
 ## Naming and structure
 

@@ -25,9 +25,11 @@ bot has its own folder under `/bots`.
   - [code-style.md](./rules/code-style.md) — TypeScript strictness, naming, comments, errors, imports.
   - [dependencies.md](./rules/dependencies.md) — how to pick and add dependencies.
   - [retrospectives.md](./rules/retrospectives.md) — at the end of a feature/chat, capture learnings into docs/rules/skills/memory.
+  - [scraping.md](./rules/scraping.md) — logged-out posture, rate-limit etiquette, tool-escalation order.
 - [`/docs`](./docs) — longer-form investigations and architecture decisions.
   - [architecture.md](./docs/architecture.md) — top-level architecture and the reasoning behind it.
   - `docs/guides/` — longer how-to guides (e.g. creating a new bot, adding a new client). Added as patterns emerge.
+    - [building-a-scraper.md](./docs/guides/building-a-scraper.md) — feasibility-ladder and selector-stability hierarchy for adding a new site.
 - [`/skills`](./skills) — runnable skills/procedures agents can invoke.
 
 When you add a new rule, doc, or skill, link it from this file so future
