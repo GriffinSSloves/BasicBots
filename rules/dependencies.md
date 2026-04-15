@@ -30,7 +30,12 @@ a battle-tested solution (Puppeteer, Discord SDK, Zod).
 
 ## Update discipline
 
-- Pin exact versions in `package.json` (no `^` or `~`). Renovate/Dependabot
-  can propose bumps as PRs; we review them deliberately.
-- Lockfile is committed.
+- Use caret ranges (`^1.2.3`) for post-1.0 packages. The committed
+  lockfile (`pnpm-lock.yaml`) is what guarantees reproducibility — the
+  range in `package.json` just controls what `pnpm install` is allowed
+  to bump to.
+- **Pin exact versions for pre-1.0 packages** (`0.x.y`). Semver minors
+  are breaking by convention pre-1.0, so a `^0.45.0` range can ship a
+  breaking change. Bump these manually.
+- Lockfile is always committed.
 - Security advisories are never ignored — patch or replace.
