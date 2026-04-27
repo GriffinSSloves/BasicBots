@@ -17,7 +17,9 @@ sustainability, not for speed of writing.
 - **No `as` casts** except at system boundaries (parsing JSON, reading
   env vars) and only paired with a runtime validator (Zod or equivalent).
 - **Prefer `type` aliases for data shapes**, `interface` for extensible
-  contracts that consumers might implement or augment.
+  contracts that consumers might implement or augment. (The oxlint
+  `typescript/consistent-type-definitions` rule is intentionally
+  disabled in `.oxlintrc.json` because it conflicts with this guidance.)
 - **No `I` prefix on interface/type names.** The abstract name takes the
   clean form (`Scraper`); implementations get descriptive names
   (`HttpScraper`, `PlaywrightScraper`, `FakeScraper`). This follows the
